@@ -1,0 +1,8 @@
+.Video-player {
+  position: fixed;
+  transform: scale(2);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: blur(10px);
+}

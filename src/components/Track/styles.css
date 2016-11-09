@@ -1,0 +1,67 @@
+.Track-li {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 16px 20px 70px 0;
+  border: 5px solid white;
+  background-color: black;
+  background-size: cover;
+  position: relative;
+}
+
+.Track-li:hover::before {
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.Track-li:hover::after {
+  transform: scale(1.1, 1.1);
+}
+
+.Track-li::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: transparent;
+  transition: all .2s ease;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.Track-li::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url('../../assets/play.svg');
+  background-size: cover;
+  top: 50%;
+  margin-top: -30px;
+  left: 50%;
+  margin-left: -30px;
+  transition: all .2s ease;
+}
+
+.Track-playing::after {
+  background-image: url('../../assets/pause.svg');
+  animation: pulsate 1.2s infinite;
+}
+
+.Track-info {
+  margin: 0;
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 210px;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1, 1) }
+  50% { transform: scale(1.2, 1.2) }
+  100% { transform: scale(1, 1) }
+}

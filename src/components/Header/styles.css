@@ -1,0 +1,13 @@
+.Header-container {
+  height: 100px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Header-branding {
+  width: 250px;
+  height: auto;
+  display: block;
+}
